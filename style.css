@@ -1,0 +1,56 @@
+#wl_form{
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid #a0bdd7;
+	box-shadow: 1px 1px 1px #aeaeae;
+}
+
+.wlp {
+    margin-left: 20px;
+}
+
+#wl_submit,#wl_submit1 {
+    background: linear-gradient(to bottom,#cecece,#a8a8a8);
+    border: 1px solid #b4b4b4;
+    box-shadow: 1px 1px 1px #cbcbcb;
+    color: #fff;
+    line-height: 17px;
+	cursor: pointer;
+}
+
+#wl_submit:hover {
+    background: linear-gradient(to bottom,#c2bfbf,#a8a8a8);
+
+}
+
+#wl_submit1:hover {
+    background: linear-gradient(to bottom,#c2bfbf,#a8a8a8);
+
+}
+
+#wl_inpt{
+border: 1px solid #b4b4b4;
+box-shadow: 1px 1px 1px #cbcbcb;
+}
+
+#wlta{
+margin: 0px auto;
+display: block;
+position: relative;
+width: 496px;
+height: 200px;
+resize: none;
+background: rgba(219, 219, 219, 0.44);
+border: 1px solid #6e7171;
+box-shadow: 1px 1px 1px 1px #e1e1e1;
+}
+
+#wl_submit1 {
+    width: 75px;
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 23px !important;
+    height: 20px;
+    text-align: center;
+}

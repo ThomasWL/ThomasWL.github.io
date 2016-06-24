@@ -2,9 +2,69 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	
+	    <script type="text/javascript" language="javascript">
+     	function wlcall() {
+     	  var msg   = $('#wl_form').serialize();
+            $.ajax({
+              type: 'POST',
+              url: 'wlinput.php',
+              data: msg,
+              success: function(data) {
+               $('#wl_inpt').val(''); $("#wlta").load("wllog.txt");
+              }
+            });
+     
+        }
+    </script>
+
+ <script>
+
+
+  $(document).ready(function(){
+  
+  $( "#wlta" ).hover(function() {
+  $("#wlta").load("wllog.txt");
+	});
+
+
+  });
+  </script>
+  
+
+ <script>
+  function wlchname1(input) {
+if (document.getElementById('wl_inpt1').value != '')
+{
+	 $("#wlta").show();
+	 $("#wl_mainp").show();
+	 $("#wl_mainp1").hide();
+	 $("#wlta").load("wllog.txt");
+  }	
+  }
+ </script>
+ 
 </head>
 <body>
-	<p>ThomasWL</p>
+
+
+  <p><textarea  style = "display: none;" id="wlta" readonly></textarea></p>
+<form id="wl_form" name="wl_test" action="javascript:void(null);" method="POST"  onsubmit="wlcall()">
+<div class = "wl_dform">
+  <p class = "wlp" id = "wl_mainp1"><b>Введите ваше имя:</b><br>
+   <input type="text" id = "wl_inpt1" name = "wlname" size="40">
+   <label id = "wl_submit1" onclick="wlchname1(this)">Отправить</label></p>
+</div> 
+  <p style = "display: none;" class = "wlp" id = "wl_mainp"><b>Введите текст:</b><br>
+   <input  type="text" id = "wl_inpt" name = "wlinp" size="40">
+   <input  type="submit" id = "wl_submit" value="Отправить">
+  </p>
+  
+</form>
+ 
+
+ 
 </body>
 </html>
