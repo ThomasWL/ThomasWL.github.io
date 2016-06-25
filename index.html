@@ -9,7 +9,7 @@
      	function wlcall() {
 		var http = new XMLHttpRequest();
 var url = "wlinput.php";
-var params = "wlinp=".document.getElementById('wl_inpt').value."&wlname=".document.getElementById('wl_inpt1').value;
+var params = "wlinp="+document.getElementById('wl_inpt').value+"&wlname="+document.getElementById('wl_inpt1').value;
 http.open("POST", url, true);
 
 //Send the proper header information along with the request
